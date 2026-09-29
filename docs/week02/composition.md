@@ -1,6 +1,6 @@
 ## Widget that i extracted :
 
-# 1. Characther Search Bar 
+# 1. Character Search Bar 
 
 - Trigger                   = Reuse dan Readability.
 
@@ -24,7 +24,7 @@
 
 - What it Reports Upward    = Mengirim pemicu jika user menekan tombol reset filter ke RosterScreen menggunakan callback onReset().
 
-# 4. Empty State
+# 4. Character Card
 
 - Trigger                   = Reuse dan Readability.
 

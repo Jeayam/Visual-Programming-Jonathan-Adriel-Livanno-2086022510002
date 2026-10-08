@@ -13,14 +13,20 @@ class CharacterSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: TextField(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      child: SearchBar(
+        hintText: 'Search character name...',
+        leading: const Icon(Icons.search),
+        trailing: query.isNotEmpty
+            ? [
+                IconButton(
+                  icon: const Icon(Icons.clear),
+                  onPressed: () => onChanged(''),
+                ),
+              ]
+            : null,
         onChanged: onChanged,
-        decoration: InputDecoration(
-          hintText: 'Character name...',
-          prefixIcon: const Icon(Icons.search),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-        ),
+        elevation: WidgetStateProperty.all(1.0),
       ),
     );
   }
